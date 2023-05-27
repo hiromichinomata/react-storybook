@@ -3,6 +3,20 @@ import Button from './Button';
 export default {
   title: 'Common/Button',
   component: Button,
+  argTypes: {
+    handleClick: { action: 'clicked' },
+    color: {
+      options: ['primary', 'default', 'danger'],
+      control: { type: 'radio' },
+    },
+    size: {
+      options: ['sm', 'base', 'lg'],
+      control: { type: 'select' },
+    },
+    backgroundColor: {
+      control: { type: 'color' },
+    },
+  },
 };
 
 const Template = (args) => <Button {...args} />;
